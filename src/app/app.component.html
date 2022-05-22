@@ -1,0 +1,15 @@
+<div [formGroup]="myForm" class="form-container">
+  <ng-container *ngFor="let formItem of dynamicFormFields">
+    <app-dynamic-form-field [formItem]="formItem"></app-dynamic-form-field>
+  </ng-container>
+
+
+
+  <pre>
+    {{myForm.value | json}}
+  </pre>
+
+  isValid: {{myForm.valid}}
+
+</div>
+
